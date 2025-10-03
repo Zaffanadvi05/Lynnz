@@ -1,0 +1,284 @@
+<!doctype html>
+
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Universitas Negeri Mentaras Raya</title>
+  <meta name="description" content="Situs resmi Universitas Negeri Mentaras Raya — Pendidikan, Riset, dan Pengabdian Masyarakat." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --primary:#0f62fe; /* biru */
+      --muted:#6b7280;
+      --bg:#f8fafc;
+      --card:#ffffff;
+      --glass: rgba(255,255,255,0.6);
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0; background:linear-gradient(180deg,var(--bg),#eef2ff); color:#0f1724;}
+    header{backdrop-filter: blur(6px); background:rgba(255,255,255,0.55); position:sticky; top:0; z-index:40; box-shadow:0 6px 16px rgba(12,18,26,0.06)}
+    .container{max-width:1100px;margin:0 auto;padding:1rem}
+    .nav{display:flex;gap:1rem;align-items:center;justify-content:space-between}
+    .brand{display:flex;gap:.75rem;align-items:center}
+    .brand .logo{width:44px;height:44px;border-radius:8px;background:linear-gradient(135deg,var(--primary),#6f42c1);display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
+    nav ul{list-style:none;margin:0;padding:0;display:flex;gap:1rem;align-items:center}
+    nav a{color:var(--muted);text-decoration:none;font-weight:600}
+    .btn-primary{background:var(--primary);color:white;padding:.6rem .9rem;border-radius:10px;text-decoration:none;font-weight:700}/* hero */
+.hero{display:grid;grid-template-columns:1fr;gap:1.5rem;padding:3rem 0;align-items:center}
+.hero-card{background:var(--card);border-radius:16px;padding:1.6rem;box-shadow:0 6px 20px rgba(12,18,26,0.06)}
+.hero h1{margin:.2rem 0;font-size:clamp(1.6rem,3.8vw,2.6rem)}
+.hero p{color:var(--muted);margin:0 0 1rem}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+
+/* sections */
+section{padding:2rem 0}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+.card{background:var(--card);padding:1rem;border-radius:12px;box-shadow:0 6px 20px rgba(12,18,26,0.05)}
+.small{font-size:.9rem;color:var(--muted)}
+
+/* faculties list */
+.faclist{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1rem}
+
+/* news */
+.news{display:grid;grid-template-columns:2fr 1fr;gap:1rem}
+
+/* contact */
+form{display:grid;gap:.75rem}
+input, textarea, select{padding:.7rem;border-radius:8px;border:1px solid #e6e9ee;font-size:1rem}
+button[type=submit]{padding:.7rem;border-radius:10px;border:0;background:var(--primary);color:white;font-weight:700}
+
+footer{padding:2rem 0;color:var(--muted)}
+
+/* responsive */
+@media (min-width:768px){
+  .hero{grid-template-columns:1fr 420px}
+  nav ul{gap:1.25rem}
+}
+@media (max-width:700px){
+  .news{grid-template-columns:1fr}
+  .grid-3{grid-template-columns:1fr}
+  nav ul{display:none}
+  .mobile-toggle{display:inline-block}
+}
+.mobile-toggle{display:none;background:none;border:0;font-size:1.2rem}
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo">UM</div>
+        <div>
+          <div style="font-weight:800">Universitas Negeri<br>Mentaras Raya</div>
+          <div class="small">Membangun masa depan yang inklusif dan berwawasan</div>
+        </div>
+      </div><nav aria-label="Main navigation">
+    <button class="mobile-toggle" aria-expanded="false" aria-controls="nav-list" onclick="toggleNav(this)">☰</button>
+    <ul id="nav-list">
+      <li><a href="#about">Tentang</a></li>
+      <li><a href="#program">Program</a></li>
+      <li><a href="#fakultas">Fakultas</a></li>
+      <li><a href="#berita">Berita</a></li>
+      <li><a href="#kontak">Kontak</a></li>
+    </ul>
+  </nav>
+
+  <div style="display:flex;gap:.6rem;align-items:center">
+    <a class="btn-primary" href="#pendaftaran">Daftar</a>
+  </div>
+</div>
+
+  </header>  <main class="container">
+    <section class="hero">
+      <div class="hero-card">
+        <p class="small">Universitas Negeri</p>
+        <h1>Selamat datang di Universitas Negeri Mentaras Raya</h1>
+        <p>Menjadi pusat unggulan pendidikan, penelitian, dan pengabdian kepada masyarakat. Temukan program studi, kegiatan penelitian, dan informasi pendaftaran di sini.</p>
+        <div style="display:flex;gap:.6rem;margin-top:1rem">
+          <a class="btn-primary" href="#program">Lihat Program</a>
+          <a href="#berita" style="align-self:center;color:var(--muted);font-weight:700">Berita & Kegiatan →</a>
+        </div><hr style="margin:1.2rem 0;border:none;border-top:1px dashed #eef2f6">
+    <div class="grid-3">
+      <div class="small"><strong>Akreditasi</strong><div class="small">Universitas: A (2024)</div></div>
+      <div class="small"><strong>Mahasiswa</strong><div class="small">~12.000 aktif</div></div>
+      <div class="small"><strong>Lokasi</strong><div class="small">Kampus Utama — Kota Mentaras</div></div>
+    </div>
+  </div>
+
+  <aside>
+    <div class="card">
+      <h3 style="margin:0 0 .6rem">Pendaftaran Mahasiswa Baru</h3>
+      <p class="small">Gelombang pendaftaran reguler dibuka setiap tahun. Persyaratan: ijazah, SKHUN, pas foto, dan dokumen pendukung.</p>
+      <a href="#pendaftaran" class="small" style="font-weight:700">Selengkapnya →</a>
+    </div>
+
+    <div class="card" style="margin-top:1rem">
+      <h4 style="margin:.2rem 0">Fasilitas Kampus</h4>
+      <ul class="small">
+        <li>Perpustakaan Digital & Fisik</li>
+        <li>Laboratorium Terpadu</li>
+        <li>Asrama Mahasiswa</li>
+        <li>Poliklinik Kampus</li>
+      </ul>
+    </div>
+  </aside>
+</section>
+
+<section id="about">
+  <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap">
+    <div style="flex:1;min-width:260px">
+      <h2>Tentang Kami</h2>
+      <p class="small">Universitas Negeri Mentaras Raya (UMR) berdiri dengan visi mencetak lulusan yang kompeten, beretika, dan memegang peran sebagai agen perubahan. Kami menggabungkan pembelajaran berbasis penelitian dengan pengabdian kepada masyarakat.</p>
+      <a href="#" class="small" style="font-weight:700">Sejarah & Visi Misi →</a>
+    </div>
+    <div style="flex:1;min-width:260px">
+      <div class="card small">
+        <strong>Misi singkat:</strong>
+        <ol>
+          <li>Menyelenggarakan pendidikan berkualitas.</li>
+          <li>Mendorong penelitian berorientasi solusi.</li>
+          <li>Meningkatkan kualitas pengabdian masyarakat.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="program">
+  <h2>Program Studi Unggulan</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Teknologi Informasi</h3>
+      <p class="small">Program sarjana dan pascasarjana berfokus pada AI, keamanan siber, dan data science.</p>
+      <div class="small" style="margin-top:.6rem">Jenjang: S1, S2</div>
+    </div>
+    <div class="card">
+      <h3>Pendidikan</h3>
+      <p class="small">Menghasilkan pendidik profesional dengan kompetensi pedagogis dan riset pendidikan.</p>
+      <div class="small" style="margin-top:.6rem">Jenjang: S1, S2</div>
+    </div>
+    <div class="card">
+      <h3>Teknik Lingkungan</h3>
+      <p class="small">Fokus pada solusi keberlanjutan, mitigasi bencana, dan pengelolaan sumber daya.</p>
+      <div class="small" style="margin-top:.6rem">Jenjang: S1</div>
+    </div>
+  </div>
+</section>
+
+<section id="fakultas">
+  <h2>Fakultas</h2>
+  <div class="faclist">
+    <div class="card"><strong>Fakultas Teknologi & Informatika</strong><div class="small">3 Program Studi</div></div>
+    <div class="card"><strong>Fakultas Keguruan & Ilmu Pendidikan</strong><div class="small">5 Program Studi</div></div>
+    <div class="card"><strong>Fakultas Teknik</strong><div class="small">4 Program Studi</div></div>
+    <div class="card"><strong>Fakultas Ilmu Sosial</strong><div class="small">6 Program Studi</div></div>
+    <div class="card"><strong>Fakultas Ekonomi & Bisnis</strong><div class="small">4 Program Studi</div></div>
+  </div>
+</section>
+
+<section id="berita">
+  <h2>Berita & Kegiatan</h2>
+  <div class="news">
+    <div>
+      <article class="card">
+        <h3>Konferensi Riset Tahunan 2025</h3>
+        <p class="small">Dosen dan mahasiswa mempresentasikan penelitian terapan di bidang energi terbarukan dan pendidikan inklusif.</p>
+        <a href="#" class="small" style="font-weight:700">Baca selengkapnya →</a>
+      </article>
+
+      <article class="card" style="margin-top:1rem">
+        <h3>Workshop Kewirausahaan Mahasiswa</h3>
+        <p class="small">Program pelatihan untuk memfasilitasi startup berbasis kampus dan inkubasi bisnis.</p>
+        <a href="#" class="small" style="font-weight:700">Daftar →</a>
+      </article>
+    </div>
+
+    <aside>
+      <div class="card">
+        <h4>Pengumuman</h4>
+        <ul class="small">
+          <li>Jadwal Ujian Tengah Semester: 12 - 18 April</li>
+          <li>Beasiswa Riset Terbuka — pendaftaran sampai 30 Mei</li>
+          <li>Perpanjangan Masa Registrasi Online</li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section id="kontak">
+  <h2>Kontak & Lokasi</h2>
+  <div style="display:grid;grid-template-columns:1fr 320px;gap:1rem;align-items:start">
+    <div>
+      <p class="small">Alamat: Jl. Merdeka No.1, Kota Mentaras — Telepon: (021) 555-0123 — Email: info@umr.ac.id</p>
+      <div class="card">
+        <h4>Hubungi Kami</h4>
+        <form onsubmit="event.preventDefault(); alert('Terima kasih! Pesan Anda telah dikirim (demo).')">
+          <input type="text" placeholder="Nama" required />
+          <input type="email" placeholder="Email" required />
+          <select required>
+            <option value="">Pilih topik</option>
+            <option>Informasi Pendaftaran</option>
+            <option>Kerjasama & Humas</option>
+            <option>Beasiswa</option>
+          </select>
+          <textarea rows="4" placeholder="Pesan" required></textarea>
+          <button type="submit">Kirim Pesan</button>
+        </form>
+      </div>
+    </div>
+
+    <div>
+      <div class="card">
+        <h4>Jam Layanan</h4>
+        <p class="small">Senin - Jumat: 08:00 - 16:00<br>Sabtu: 08:00 - 12:00</p>
+        <h4 style="margin-top:.8rem">Peta</h4>
+        <div class="small" style="background:#eef2ff;padding:1rem;border-radius:8px">[Placeholder peta interaktif — tambahkan embed Google Maps di sini]</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pendaftaran">
+  <h2>Pendaftaran</h2>
+  <div class="card">
+    <h3>Alur Pendaftaran</h3>
+    <ol class="small">
+      <li>Mendaftar di portal pendaftaran online.</li>
+      <li>Unggah dokumen dan membayar biaya pendaftaran.</li>
+      <li>Ikuti seleksi sesuai jalur (UTBK, mandiri, atau beasiswa).</li>
+    </ol>
+    <a class="btn-primary" href="#">Daftar Sekarang</a>
+  </div>
+</section>
+
+  </main>  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap">
+      <div>
+        <strong>Universitas Negeri Mentaras Raya</strong>
+        <div class="small">© 2025 Universitas Negeri Mentaras Raya. Semua hak cipta dilindungi.</div>
+      </div>
+      <div class="small">Sosial: <a href="#">Instagram</a> · <a href="#">Twitter</a> · <a href="#">YouTube</a></div>
+    </div>
+  </footer>  <script>
+    function toggleNav(btn){
+      const ul = document.getElementById('nav-list');
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', !expanded);
+      if(ul.style.display === 'flex') ul.style.display = 'none'; else ul.style.display = 'flex';
+      ul.style.flexDirection = 'column';
+      ul.style.background = 'rgba(255,255,255,0.9)';
+      ul.style.padding = '1rem';
+      ul.style.position = 'absolute';
+      ul.style.right = '1rem';
+      ul.style.top = '64px';
+      ul.style.borderRadius = '10px';
+      ul.style.boxShadow = '0 8px 30px rgba(12,18,26,0.08)';
+    }
+  </script></body>
+</html>
